@@ -1,29 +1,16 @@
 # vue-chat
 
-## Project setup
-```
-npm install
-```
+### 项目环境
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+`vue + express + websocket`
 
-### Compiles and minifies for production
-```
-npm run build
-```
+### 概要
 
-### Run your tests
-```
-npm run test
-```
+> vue练手项目：实现本地mock数据，基于vue的聊天对话框
 
-### Lints and fixes files
-```
-npm run lint
-```
+### 预实现需求
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+* [ ] 本地用户、聊天假数据
+* [ ] 一对一聊天
+* [ ] 群聊
+* [ ] 退出通知

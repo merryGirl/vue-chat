@@ -89,6 +89,7 @@ methods: {
   exitRoom() {
     localStorage.removeItem('vueChatName'); 
     this.name = '';
+    this.chatPeopleName = '';
   },
 
   selcetChat(userVal) {

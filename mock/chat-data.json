@@ -1,0 +1,613 @@
+{
+  "code": 200,
+  "data": [{
+    "sender": "卡酱",
+    "receiver": [{
+      "name": "admin",
+      "read": false
+    }, {
+      "name": "王老师",
+      "read": false
+    }, {
+      "name": "李老师",
+      "read": false
+    }, {
+      "name": "陈老师",
+      "read": false
+    }, {
+      "name": "占山",
+      "read": false
+    }, {
+      "name": "小英雄",
+      "read": false
+    }, {
+      "name": "卡酱",
+      "read": false
+    }, {
+      "name": "云山",
+      "read": false
+    }, {
+      "name": "大连",
+      "read": false
+    }],
+    "data": "2019-05-06 16:19:14",
+    "msg": "哈哈",
+    "type": "plain"
+  }, {
+    "sender": "卡酱",
+    "receiver": [{
+      "name": "admin",
+      "read": false
+    }],
+    "data": "2019-05-06 16:28:48",
+    "msg": "aaa",
+    "type": "plain"
+  }, {
+    "sender": "卡酱",
+    "receiver": [{
+      "name": "admin",
+      "read": false
+    }],
+    "data": "2019-05-06 16:29:31",
+    "msg": "你好",
+    "type": "plain"
+  }, {
+    "sender": "admin",
+    "receiver": [{
+      "name": "卡酱",
+      "read": false
+    }],
+    "data": "2019-05-06 16:29:36",
+    "msg": "你好",
+    "type": "plain"
+  }, {
+    "sender": "admin",
+    "receiver": [{
+      "name": "admin",
+      "read": false
+    }, {
+      "name": "王老师",
+      "read": false
+    }, {
+      "name": "李老师",
+      "read": false
+    }, {
+      "name": "陈老师",
+      "read": false
+    }, {
+      "name": "占山",
+      "read": false
+    }, {
+      "name": "小英雄",
+      "read": false
+    }, {
+      "name": "卡酱",
+      "read": false
+    }, {
+      "name": "云山",
+      "read": false
+    }, {
+      "name": "大连",
+      "read": false
+    }],
+    "data": "2019-05-06 16:29:46",
+    "msg": "群聊消息",
+    "type": "plain"
+  }, {
+    "sender": "admin",
+    "receiver": [{
+      "name": "卡酱",
+      "read": false
+    }],
+    "data": "2019-05-06 16:30:52",
+    "msg": "你好呀",
+    "type": "plain"
+  }, {
+    "sender": "admin",
+    "receiver": [{
+      "name": "admin",
+      "read": false
+    }, {
+      "name": "王老师",
+      "read": false
+    }, {
+      "name": "李老师",
+      "read": false
+    }, {
+      "name": "陈老师",
+      "read": false
+    }, {
+      "name": "占山",
+      "read": false
+    }, {
+      "name": "小英雄",
+      "read": false
+    }, {
+      "name": "卡酱",
+      "read": false
+    }, {
+      "name": "云山",
+      "read": false
+    }, {
+      "name": "大连",
+      "read": false
+    }],
+    "data": "2019-05-06 16:31:11",
+    "msg": "群聊消息2",
+    "type": "plain"
+  }, {
+    "sender": "admin",
+    "receiver": [{
+      "name": "卡酱",
+      "read": false
+    }],
+    "data": "2019-05-06 16:32:2",
+    "msg": "哈哈",
+    "type": "plain"
+  }, {
+    "sender": "卡酱",
+    "receiver": [{
+      "name": "admin",
+      "read": false
+    }],
+    "data": "2019-05-06 16:32:30",
+    "msg": "你好好",
+    "type": "plain"
+  }, {
+    "sender": "卡酱",
+    "receiver": [{
+      "name": "admin",
+      "read": false
+    }],
+    "data": "2019-05-06 16:32:33",
+    "msg": "巴啦啦",
+    "type": "plain"
+  }, {
+    "sender": "admin",
+    "receiver": [{
+      "name": "卡酱",
+      "read": false
+    }],
+    "data": "2019-05-06 16:32:38",
+    "msg": "什么",
+    "type": "plain"
+  }, {
+    "sender": "admin",
+    "receiver": [{
+      "name": "admin",
+      "read": false
+    }, {
+      "name": "王老师",
+      "read": false
+    }, {
+      "name": "李老师",
+      "read": false
+    }, {
+      "name": "陈老师",
+      "read": false
+    }, {
+      "name": "占山",
+      "read": false
+    }, {
+      "name": "小英雄",
+      "read": false
+    }, {
+      "name": "卡酱",
+      "read": false
+    }, {
+      "name": "云山",
+      "read": false
+    }, {
+      "name": "大连",
+      "read": false
+    }],
+    "data": "2019-05-06 16:32:48",
+    "msg": "群聊消息3",
+    "type": "plain"
+  }, {
+    "sender": "admin",
+    "receiver": [{
+      "name": "admin",
+      "read": false
+    }, {
+      "name": "王老师",
+      "read": false
+    }, {
+      "name": "李老师",
+      "read": false
+    }, {
+      "name": "陈老师",
+      "read": false
+    }, {
+      "name": "占山",
+      "read": false
+    }, {
+      "name": "小英雄",
+      "read": false
+    }, {
+      "name": "卡酱",
+      "read": false
+    }, {
+      "name": "云山",
+      "read": false
+    }, {
+      "name": "大连",
+      "read": false
+    }],
+    "data": "2019-05-06 16:32:52",
+    "msg": "群聊消息4",
+    "type": "plain"
+  }, {
+    "sender": "admin",
+    "receiver": [{
+      "name": "admin",
+      "read": false
+    }, {
+      "name": "王老师",
+      "read": false
+    }, {
+      "name": "李老师",
+      "read": false
+    }, {
+      "name": "陈老师",
+      "read": false
+    }, {
+      "name": "占山",
+      "read": false
+    }, {
+      "name": "小英雄",
+      "read": false
+    }, {
+      "name": "卡酱",
+      "read": false
+    }, {
+      "name": "云山",
+      "read": false
+    }, {
+      "name": "大连",
+      "read": false
+    }],
+    "data": "2019-05-06 16:32:54",
+    "msg": "哈哈",
+    "type": "plain"
+  }, {
+    "sender": "云山",
+    "receiver": [{
+      "name": "admin",
+      "read": false
+    }],
+    "data": "2019-05-06 17:20:59",
+    "msg": "啊手动阀",
+    "type": "plain"
+  }, {
+    "sender": "占山",
+    "receiver": [{
+      "name": "admin",
+      "read": false
+    }],
+    "data": "2019-05-07 9:40:47",
+    "msg": "啊手动阀",
+    "type": "plain"
+  }, {
+    "sender": "占山",
+    "receiver": [{
+      "name": "admin",
+      "read": false
+    }, {
+      "name": "王老师",
+      "read": false
+    }, {
+      "name": "李老师",
+      "read": false
+    }, {
+      "name": "陈老师",
+      "read": false
+    }, {
+      "name": "占山",
+      "read": false
+    }, {
+      "name": "小英雄",
+      "read": false
+    }, {
+      "name": "卡酱",
+      "read": false
+    }, {
+      "name": "云山",
+      "read": false
+    }, {
+      "name": "大连",
+      "read": false
+    }],
+    "data": "2019-05-07 9:40:58",
+    "msg": "啊手动阀",
+    "type": "plain"
+  }, {
+    "sender": "大连",
+    "receiver": [{
+      "name": "admin",
+      "read": false
+    }, {
+      "name": "王老师",
+      "read": false
+    }, {
+      "name": "李老师",
+      "read": false
+    }, {
+      "name": "陈老师",
+      "read": false
+    }, {
+      "name": "占山",
+      "read": false
+    }, {
+      "name": "小英雄",
+      "read": false
+    }, {
+      "name": "卡酱",
+      "read": false
+    }, {
+      "name": "云山",
+      "read": false
+    }, {
+      "name": "大连",
+      "read": false
+    }],
+    "data": "2019-05-07 9:49:47",
+    "msg": "阿凡达",
+    "type": "plain"
+  }, {
+    "sender": "大连",
+    "receiver": [{
+      "name": "admin",
+      "read": false
+    }],
+    "data": "2019-05-07 9:49:55",
+    "msg": "啊手动阀",
+    "type": "plain"
+  }, {
+    "sender": "admin",
+    "receiver": [{
+      "name": "大连",
+      "read": false
+    }],
+    "data": "2019-05-07 9:50:17",
+    "msg": "啊手动阀",
+    "type": "plain"
+  }, {
+    "sender": "admin",
+    "receiver": [{
+      "name": "大连",
+      "read": false
+    }],
+    "data": "2019-05-07 9:50:19",
+    "msg": "啊发生的",
+    "type": "plain"
+  }, {
+    "sender": "云山",
+    "receiver": [{
+      "name": "admin",
+      "read": false
+    }],
+    "data": "2019-05-07 9:51:50",
+    "msg": "啊手动阀",
+    "type": "plain"
+  }, {
+    "sender": "云山",
+    "receiver": [{
+      "name": "admin",
+      "read": false
+    }, {
+      "name": "王老师",
+      "read": false
+    }, {
+      "name": "李老师",
+      "read": false
+    }, {
+      "name": "陈老师",
+      "read": false
+    }, {
+      "name": "占山",
+      "read": false
+    }, {
+      "name": "小英雄",
+      "read": false
+    }, {
+      "name": "卡酱",
+      "read": false
+    }, {
+      "name": "云山",
+      "read": false
+    }, {
+      "name": "大连",
+      "read": false
+    }],
+    "data": "2019-05-07 9:52:27",
+    "msg": "发生的",
+    "type": "plain"
+  }, {
+    "sender": "云山",
+    "receiver": [{
+      "name": "admin",
+      "read": false
+    }, {
+      "name": "王老师",
+      "read": false
+    }, {
+      "name": "李老师",
+      "read": false
+    }, {
+      "name": "陈老师",
+      "read": false
+    }, {
+      "name": "占山",
+      "read": false
+    }, {
+      "name": "小英雄",
+      "read": false
+    }, {
+      "name": "卡酱",
+      "read": false
+    }, {
+      "name": "云山",
+      "read": false
+    }, {
+      "name": "大连",
+      "read": false
+    }],
+    "data": "2019-05-07 9:52:32",
+    "msg": "所有一切的",
+    "type": "plain"
+  }, {
+    "sender": "云山",
+    "receiver": [{
+      "name": "admin",
+      "read": false
+    }, {
+      "name": "王老师",
+      "read": false
+    }, {
+      "name": "李老师",
+      "read": false
+    }, {
+      "name": "陈老师",
+      "read": false
+    }, {
+      "name": "占山",
+      "read": false
+    }, {
+      "name": "小英雄",
+      "read": false
+    }, {
+      "name": "卡酱",
+      "read": false
+    }, {
+      "name": "云山",
+      "read": false
+    }, {
+      "name": "大连",
+      "read": false
+    }],
+    "data": "2019-05-07 9:52:35",
+    "msg": "都再改变",
+    "type": "plain"
+  }, {
+    "sender": "小英雄",
+    "receiver": [{
+      "name": "云山",
+      "read": false
+    }],
+    "data": "2019-05-07 9:54:22",
+    "msg": "阿斯顿发射点",
+    "type": "plain"
+  }, {
+    "sender": "云山",
+    "receiver": [{
+      "name": "小英雄",
+      "read": false
+    }],
+    "data": "2019-05-07 9:54:29",
+    "msg": "啊手动阀",
+    "type": "plain"
+  }, {
+    "sender": "admin",
+    "receiver": [{
+      "name": "admin",
+      "read": false
+    }, {
+      "name": "王老师",
+      "read": false
+    }, {
+      "name": "李老师",
+      "read": false
+    }, {
+      "name": "陈老师",
+      "read": false
+    }, {
+      "name": "占山",
+      "read": false
+    }, {
+      "name": "小英雄",
+      "read": false
+    }, {
+      "name": "卡酱",
+      "read": false
+    }, {
+      "name": "云山",
+      "read": false
+    }, {
+      "name": "大连",
+      "read": false
+    }],
+    "data": "2019-05-07 10:4:37",
+    "msg": "啊打发",
+    "type": "plain"
+  }, {
+    "sender": "云山",
+    "receiver": [{
+      "name": "admin",
+      "read": false
+    }, {
+      "name": "王老师",
+      "read": false
+    }, {
+      "name": "李老师",
+      "read": false
+    }, {
+      "name": "陈老师",
+      "read": false
+    }, {
+      "name": "占山",
+      "read": false
+    }, {
+      "name": "小英雄",
+      "read": false
+    }, {
+      "name": "卡酱",
+      "read": false
+    }, {
+      "name": "云山",
+      "read": false
+    }, {
+      "name": "大连",
+      "read": false
+    }],
+    "data": "2019-05-07 10:4:51",
+    "msg": "11111111",
+    "type": "plain"
+  }, {
+    "sender": "大连",
+    "receiver": [{
+      "name": "王老师",
+      "read": false
+    }],
+    "data": "2019-08-29 16:31:12",
+    "msg": "1111111111",
+    "type": "plain"
+  }, {
+    "sender": "王老师",
+    "receiver": [{
+      "name": "大连",
+      "read": false
+    }],
+    "data": "2019-08-29 16:31:24",
+    "msg": "1111111111",
+    "type": "plain"
+  }, {
+    "sender": "王老师",
+    "receiver": [{
+      "name": "大连",
+      "read": false
+    }],
+    "data": "2019-08-29 16:31:28",
+    "msg": "33333333333",
+    "type": "plain"
+  }, {
+    "sender": "王老师",
+    "receiver": [{
+      "name": "大连",
+      "read": false
+    }],
+    "data": "2019-08-29 16:31:30",
+    "msg": "333333333333333333",
+    "type": "plain"
+  }]
+}

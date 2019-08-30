@@ -1,21 +1,20 @@
 /* eslint-disable prettier/prettier */
-/**
- * 配置axios代理
- * /dev 开发环境
- */
+const express = require('express');
+const app = express();
+const bodyParser = require('body-parser')
+const jsonParser = bodyParser.json()
+
+const userData = require('./mock/user.json')   // 用户信息
+
 module.exports = {
   publicPath: '/',  
   productionSourceMap: false,        //去掉map
   devServer: {
-    proxy: {
-      '/dev': {
-        target: 'http://192.168.1.140:1818',       //后端本地
-        changeOrigin: true, 
-        ws: true,
-        pathRewrite: {
-          '^/dev': '/' 
-        }
-      },
+    before(app) {
+      // 用户登录验证
+      app.get('/user/login', jsonParser, (req, res) => {
+        res.json(userData);
+		})
     }
   },
   configureWebpack: {

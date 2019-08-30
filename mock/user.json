@@ -5,7 +5,7 @@
       "id": "1",
       "name": "admin",
       "pass": "123456",
-      "auth": "admin"  
+      "auth": "管理员"  
     },
     {
       "id": "2",

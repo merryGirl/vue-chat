@@ -1,6 +1,6 @@
 # vue-chat-blog
 
-为了验证+巩固vue，加上近期比较悠闲，搭建可聊天版社区vue-chat-blog(简称vcBlog)
+为了验证+巩固vue，搭建可聊天版社区vue-chat-blog(简称vcBlog)
 
 ### 项目环境
 

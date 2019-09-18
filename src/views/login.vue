@@ -10,6 +10,10 @@
   <div class="handle-btn" v-if="name">
     <button @click="exitRoom">退出聊天室</button>
   </div>
+  <mavon-editor v-model="value"/>
+
+
+
 
   <div v-if="name" class="chat-wrapper">
     <ul>
@@ -46,6 +50,7 @@ data() {
     name: '',                            //login name
     chatPeopleName: '',                  
     errorMsg: '',
+    value: ''
   };
 },
 computed: {},

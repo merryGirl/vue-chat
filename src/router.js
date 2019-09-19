@@ -2,7 +2,8 @@
 import Vue from "vue";
 import Router from "vue-router";
 
-const login = () => import('@/views/login');
+const login = () => import('@/views/login')
+const userHomepage = () => import('@/views/user/index')
 const userInfo = () => import('@/views/user/info')
 const blog = () => import('@/views/blog/index')
 
@@ -21,6 +22,11 @@ export default new Router({
       path: '/userInfo',
       name: 'userInfo',
       component: userInfo
+    },
+    {
+      path: '/userHomepage',
+      name: 'userHomepage',
+      component: userHomepage
     },
     {
       path: '/',

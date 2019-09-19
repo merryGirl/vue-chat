@@ -6,7 +6,9 @@
 
     </div>
     <ul>
-      <li>首页</li>
+      <li>
+        <router-link to="/">首页</router-link>
+      </li>
       <li>沸点</li>
       <li>社区</li>
       <li>
@@ -15,7 +17,16 @@
       <li>发布文章</li>
       <i class="el-icon-message-solid"></i>
       <li>
-        <router-link to="/userInfo">头像</router-link>
+        <el-dropdown>
+          <span class="el-dropdown-link">
+            头像
+          </span>
+          <el-dropdown-menu slot="dropdown">
+            <el-dropdown-item v-for="(userItem, userIndex) in userConfig" :key="userIndex">
+              <router-link :to="userItem.path">{{userItem.name}}</router-link>
+            </el-dropdown-item>
+          </el-dropdown-menu>
+        </el-dropdown>
       </li>
     </ul>
   </div>
@@ -28,7 +39,13 @@ export default {
 components: {},
 data() {
   return {
-
+    userConfig: [{
+      name: '主页',
+      path: '/userHomepage'
+    },{
+      name: '登出',
+      path: '/login'
+    }]
   };
 },
 computed: {},

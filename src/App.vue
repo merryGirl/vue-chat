@@ -1,15 +1,28 @@
 <template>
   <div id="app">
-    <router-view />
+    <blog-head></blog-head>
+    <router-view></router-view>
   </div>
 </template>
 
-<style lang="less">
+<script>
+import blogHead from './components/blog-head'
+
+export default {
+  name: 'app',
+  components: {
+    blogHead
+  }
+}
+</script>
+
+<style>
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  margin-top: 60px;
 }
 </style>

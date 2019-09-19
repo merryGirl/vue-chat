@@ -1,18 +1,18 @@
 <!-- 组件描述 -->
 <template>
-<div class="md-edit">
-  <mavon-editor v-model="value"/>
+<div class="blog">
 </div>
 </template>
 
 <script>
 
 export default {
-components: {},
+components: {
+},
 data() {
-  return {
-    value: ''
-  };
+return {
+
+};
 },
 computed: {},
 watch: {},

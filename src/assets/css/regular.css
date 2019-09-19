@@ -1,0 +1,59 @@
+/* Make the page render regular */
+body,
+div,
+ol,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+th,
+td,
+dl,
+dd,
+form,
+iframe,
+input,
+textarea,
+select,
+label,
+article,
+aside,
+footer,
+header,
+menu,
+nav,
+section,
+time,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: 'PingFangSC-Regular', Helvetica, Arial, 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+	font-size: 14px;
+	line-height: 1.42857143;
+  color: #383838;
+  background-color: rgba(247,251,255,1);
+}
+
+a {
+	cursor: pointer;
+	text-decoration: none;
+	color: #333;
+	background-color: transparent;
+}
+a:active,
+a:hover {
+	outline: 0;
+}
+
+ul,
+ol,
+li {
+	list-style: none;
+}

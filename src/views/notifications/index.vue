@@ -1,15 +1,13 @@
-<!-- 组件描述 -->
 <template>
-<div class="blog">
-  博客博客内容
+<div class="notifictions">
+  消息列表
 </div>
 </template>
 
 <script>
 
 export default {
-components: {
-},
+components: {},
 data() {
 return {
 

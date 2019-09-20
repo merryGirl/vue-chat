@@ -6,16 +6,23 @@
 
     </div>
     <ul>
+      <li @click="routerSkip('/')">{{ $t('headNav.main') }}</li>
+      <li @click="routerSkip('/hotBlog')">{{ $t('headNav.hot') }}</li>
+      <li @click="routerSkip('/community')">{{ $t('headNav.community') }}</li>
       <li>
-        <router-link to="/">首页</router-link>
+        <el-input 
+          size="mini" 
+          suffix-icon="el-icon-search"
+          v-model="searchVal"
+          :placeholder="$t('headNav.searchHolder')"></el-input>
       </li>
-      <li>沸点</li>
-      <li>社区</li>
-      <li>
-        <el-input placeholder="请输入搜索关键字"></el-input>
+      <li><i class="el-icon-message-solid" @click="routerSkip('/notifications')"></i></li>
+      <li @click="routerSkip('/edit')">
+        <el-button type="warning" size="mini" round>{{ $t('headNav.issue') }}</el-button>
       </li>
-      <li>发布文章</li>
-      <i class="el-icon-message-solid"></i>
+      <li @click="changeLang" class="pointer">
+        {{ $i18n.locale | langText }}
+      </li>
       <li>
         <el-dropdown>
           <span class="el-dropdown-link">
@@ -45,27 +52,50 @@ data() {
     },{
       name: '登出',
       path: '/login'
-    }]
+    }],
+    searchVal: ''
   };
 },
 computed: {},
-watch: {},
+filters: {
+  langText(val) {
+    return val == 'zh' ? 'EN' : '中';
+  }
+},
+watch: {
+},
 created() {},
 mounted() {},
-methods: {}
+methods: {
+  changeLang() {
+    this.$i18n.locale = this.$i18n.locale == 'zh' ? 'en' : 'zh';
+  },
+
+  routerSkip(pathName) {
+    this.$router.push({ path: pathName });
+  }
+
+}
 }
 </script>
 <style lang='less' scoped>
 header {
   position: fixed;
   top: 0;
+  display: flex;
+  align-items: center;
   width: 100%;
-  background-color: white;
+  height: 60px;
+  background-color: @mian-head-bg-color;
   border-bottom: 1px solid #f1f1f1;
   .container {
     max-width: 960px;
+    margin: auto;
     ul {
       display: flex;
+      li {
+        padding: 0 10px;
+      }
     }
   }
 

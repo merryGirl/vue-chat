@@ -1,19 +1,17 @@
-<!-- 组件描述 -->
 <template>
-<div class="blog">
-  博客博客内容
+<div class="community">
+  社区社区聊天区域
 </div>
 </template>
 
 <script>
 
 export default {
-components: {
-},
+components: {},
 data() {
-return {
+  return {
 
-};
+  };
 },
 computed: {},
 watch: {},

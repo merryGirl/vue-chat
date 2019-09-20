@@ -1,6 +1,7 @@
 <!-- 用户信息 -->
 <template>
 <div class="user-info">
+  信息卡系您了啊
   <!-- <div class="head">头部信息</div> -->
   <div class="middle">
 

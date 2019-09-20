@@ -1,7 +1,7 @@
 <!-- 组件描述 -->
 <template>
 <div class="login">
-  <span @click="aa" >asdfasdfasdfasdfasdfa</span>
+  <span @click="aa" >您已登出</span>
   <router-link to="/userInfo">Go to Bar</router-link>
   <!-- <transition name="slide-fade">
     <user-info v-if="show"></user-info>
@@ -10,11 +10,9 @@
 </template>
 
 <script>
-import userInfo from './user/info'
 
 export default {
 components: {
-  userInfo
 },
 data() {
   return {

@@ -1,7 +1,6 @@
-<!-- 组件描述 -->
 <template>
-<div class="blog">
-  博客博客内容
+<div class="edit-wrapper">
+  社群发表文章
 </div>
 </template>
 

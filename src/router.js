@@ -4,8 +4,12 @@ import Router from "vue-router";
 
 const login = () => import('@/views/login')
 const userHomepage = () => import('@/views/user/index')
-const userInfo = () => import('@/views/user/info')
+const userInfo = () => import('@/views/user/info-card')
 const blog = () => import('@/views/blog/index')
+const hotBlog = () => import('@/views/hotBlog/index')
+const community = () => import('@/views/chat/index')
+const notifications = () => import('@/views/notifications/index')
+const edit = () => import('@/views/edit/index')
 
 Vue.use(Router);
 
@@ -21,7 +25,10 @@ export default new Router({
     {
       path: '/userInfo',
       name: 'userInfo',
-      component: userInfo
+      component: userInfo,
+      meta: {
+        headTile: '',
+      }
     },
     {
       path: '/userHomepage',
@@ -32,6 +39,26 @@ export default new Router({
       path: '/',
       name: 'blog',
       component: blog
+    },
+    {
+      path: '/hotBlog',
+      name: 'hotBlog',
+      component: hotBlog
+    },
+    {
+      path: '/notifications',
+      name: 'notifications',
+      component: notifications
+    },
+    {
+      path: '/community',
+      name: 'community',
+      component: community
+    },
+    {
+      path: '/edit',
+      name: 'edit',
+      component: edit
     },
   ]
 });

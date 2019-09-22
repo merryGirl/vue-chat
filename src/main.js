@@ -12,6 +12,7 @@ import './plugins/element.js'
 
 Vue.config.productionTip = false;
 Vue.prototype.axios = axios;
+Vue.prototype.$store = store;
 
 Vue.use(mavonEditor)
 

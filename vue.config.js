@@ -1,16 +1,13 @@
 /* eslint-disable prettier/prettier */
-// const express = require('express')
+const express = require('express')
+const app = express()
 const path = require('path')
-// const app = express()
 const bodyParser = require('body-parser')
 const jsonParser = bodyParser.json()
 const userData = require('./mock/user.json')   // 用户信息
 
 module.exports = {
   publicPath: '/',
-  // useEslint: false,
-
-  //去掉map
   productionSourceMap: false,
 
   devServer: {
@@ -18,7 +15,21 @@ module.exports = {
       // 用户登录验证
       app.get('/user/login', jsonParser, (req, res) => {
         res.json(userData);
-		})
+      });
+
+      // 当前登录用户信息
+      app.get('/currentUser', jsonParser, (req, res) => {
+        let data = {
+          code: 200,
+          result: {
+            name: "admin",
+            position: '前端', 
+            company: '公司',
+            introduction: '我是蓝色一只蓝精灵'
+          },
+        }
+        res.json(data);
+      });
     }
   },
 

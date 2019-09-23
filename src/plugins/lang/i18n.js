@@ -16,7 +16,7 @@ const messages = {
 };
 
 const i18n = new Vuei18n({
-  locale: 'zh-CN',
+  locale: 'en',
   messages
 })
 

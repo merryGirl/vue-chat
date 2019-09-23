@@ -9,13 +9,22 @@
 
 export default {
 components: {},
+props: {
+
+},
 data() {
   return {
     value: ''
   };
 },
 computed: {},
-watch: {},
+watch: {
+  value: {
+    handler: function(nv) {
+      this.$emit('contentChange', nv)
+    }
+  }
+},
 created() {},
 mounted() {},
 methods: {}

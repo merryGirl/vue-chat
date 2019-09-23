@@ -28,7 +28,7 @@
           <span class="el-dropdown-link">
             头像
           </span>
-          <el-dropdown-menu slot="dropdown">
+          <el-dropdown-menu slot="dropdown" class="head-dropdown">
             <el-dropdown-item v-for="(userItem, userIndex) in userConfig" :key="userIndex">
               <router-link :to="userItem.path">{{userItem.name}}</router-link>
             </el-dropdown-item>

@@ -18,7 +18,7 @@ module.exports = {
       app.post('/user/login', jsonParser, (req, res) => {
         let Val = false
 
-        userData.result.filter(userItem => {
+        userData.filter(userItem => {
           if (userItem.email == req.body.email && userItem.pass == req.body.pass) {
             Val = true
           }	

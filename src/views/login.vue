@@ -37,6 +37,16 @@
           <i slot="prefix" class="el-input__icon el-icon-lock"></i>
         </el-input>
       </el-form-item>
+      <el-form-item prop="graphicCode" label="验证码：">
+        <el-input v-model.trim="user.graphicCode" placeholder="请输入验证码">
+          <i slot="prefix" class="el-input__icon icon-font icon-safe"></i>
+          <template slot="append">
+          </template>
+        </el-input>
+        <div class="pointer verify-code" @click="refreshCode">
+          <verify-code :identifyCode="identifyCode"></verify-code>
+        </div>
+      </el-form-item>
     </template>
   </el-form>
 
@@ -47,10 +57,12 @@
 
 <script>
 import hidePass from '../components/hide-pass'
+import verifyCode from '../components/identify'
 
 export default {
 components: {
-  hidePass
+  hidePass,
+  verifyCode
 },
 data() {
   let verifyEmail = (rule, value, callback) => {
@@ -120,7 +132,8 @@ data() {
       email: '',
       pass: '',
       passConfirm : '',
-      name: ''
+      name: '',
+      graphicCode: ''
     },
     rules: {
       email: [
@@ -137,6 +150,8 @@ data() {
       ],
 
     },
+    identifyCode: '1234',
+    identifyCodes: 'a1b2c3d4e5f67g8h9i0jklmn4opqrst5uv6wxyzABCD2EF7GHIJ8KLM3N9OPQRS0TU1VW4XYZ',
   }
 },
 computed: {},
@@ -150,7 +165,10 @@ watch: {
   },
 },
 created() {},
-mounted() {},
+mounted() {
+  this.identifyCode = "";
+  this.makeCode(this.identifyCodes, 4);
+},
 methods: {
   changeForm() {
     this.formType = this.formType == 'login' ? 'registered' : 'login'
@@ -205,7 +223,24 @@ methods: {
         return false
       }
     })
-  }
+  },
+
+  refreshCode() {
+    this.identifyCode = "";
+    this.makeCode(this.identifyCodes, 4);
+  },
+
+  makeCode(o, l) {
+    for (let i = 0; i < l; i++) {
+      this.identifyCode += o[
+        this.randomNum(0, o.length)
+      ];
+    }
+  },
+
+  randomNum(min, max) {
+    return Math.floor(Math.random() * (max - min) + min);
+  },
 }
 }
 </script>

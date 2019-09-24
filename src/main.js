@@ -7,6 +7,7 @@ import axios from './plugins/axios'
 import i18n from './plugins/lang/i18n'
 import mavonEditor from 'mavon-editor'
 import quillEditor from 'vue-quill-editor'
+import utils from './assets/util/index'
 import './assets/css/base.less'
 import 'mavon-editor/dist/css/index.css'
 import './plugins/element.js'
@@ -16,9 +17,10 @@ import 'quill/dist/quill.core.css'
 import 'quill/dist/quill.snow.css'
 import 'quill/dist/quill.bubble.css'
 
-Vue.config.productionTip = false;
-Vue.prototype.axios = axios;
-Vue.prototype.$store = store;
+Vue.config.productionTip = false
+Vue.prototype.$axios = axios
+Vue.prototype.$store = store
+Vue.prototype.$utils = utils
 
 Vue.use(mavonEditor)
 Vue.use(quillEditor)

@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 export default {
-  // 用户昵称检测
   /**
+   * 用户输入敏感字符检测
    * @param {*} typeName  被检测的输入分类
    * @param {*} str       被检测的字符串
    * return 含有的字段组成的数组
@@ -21,6 +21,5 @@ export default {
     })
     
     return existSensitArr
-  }
-
+  },
 }

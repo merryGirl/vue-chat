@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex';
+import { mapGetters, mapActions } from 'vuex'
 
 export default {
 components: {},
@@ -40,7 +40,7 @@ data() {
 },
 computed: {
   localLang() {
-    return this.$i18n.locale;
+    return this.$i18n.locale
   },
 
   ...mapGetters({

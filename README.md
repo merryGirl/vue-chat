@@ -59,3 +59,30 @@
 * [ ] 左下角的svg可爱的动画
 * [ ] 右下角置顶
 * [ ] 全局搜索关键字
+
+## json表
+
+> 博客表
+
+字段 | 意义
+---|---
+id | 博客id
+title | 博客题
+content | 博客体
+publishUser | 发布者
+publishTime | 发布时间
+starIds | 点赞者id数组
+collectIds | 收藏者id数组
+
+***
+
+> 评论
+
+* id | 评论id(与博客id对应)
+* result
+ 
+result字段 | 意义
+---|---
+name | 评论者昵称
+time | 评论时间
+content | 评论内容

@@ -1,1 +1,31 @@
-[{"id":"1","name":"admin","email":"111@qq.com","pass":"123456aa","auth":"admin","position":"CEO","company":"小红旗","introduction":"一条大河、波浪宽","starArticleIds":[]},{"id":"2","name":"王老师","email":"222@qq.com","pass":"123456aa","auth":"member","position":"泥水匠","company":"小红旗","introduction":"一条大河、波浪宽","starArticleIds":[]},{"id":3,"name":"1111111111111","email":"11111@22.com","pass":"123456aa","auth":"member","position":"","company":"","introduction":"","starArticleIds":[]}]
+[{
+  "id": "1",
+  "name": "admin",
+  "email": "111@qq.com",
+  "pass": "123456aa",
+  "auth": "admin",
+  "position": "CEO",
+  "company": "小红旗",
+  "introduction": "一条大河、波浪宽",
+  "starArticleIds": []
+}, {
+  "id": "2",
+  "name": "王老师",
+  "email": "222@qq.com",
+  "pass": "123456aa",
+  "auth": "member",
+  "position": "泥水匠",
+  "company": "小红旗",
+  "introduction": "一条大河、波浪宽",
+  "starArticleIds": []
+}, {
+  "id": 3,
+  "name": "1111111111111",
+  "email": "11111@22.com",
+  "pass": "123456aa",
+  "auth": "member",
+  "position": "",
+  "company": "",
+  "introduction": "",
+  "starArticleIds": []
+}]

@@ -7,6 +7,7 @@ const bodyParser = require('body-parser')
 const jsonParser = bodyParser.json()
 
 const userData = require('./mock/user.json')   // 用户信息
+const blogData = require('./mock/blog.json')
 
 module.exports = {
   publicPath: '/',
@@ -14,38 +15,60 @@ module.exports = {
 
   devServer: {
     before(app) {
-      // 登录
-      app.post('/user/login', jsonParser, (req, res) => {
-        let Val = false
-
-        userData.filter(userItem => {
-          if (userItem.email == req.body.email && userItem.pass == req.body.pass) {
-            Val = true
-          }	
-        })
-  
-        let code = Val == true ? 200 : 201
-        let msg =  Val == true ? '登录成功！' : '登录失败,用户名或密码错误！'
-
-        res.json({
-          "code": code,
-          "result": Val,
-          "message": msg
-        })
-      })
-
-      // 注册
-      app.post('/user/registered', jsonParser, (req, res) => {
-        fs.readFile(path.resolve(__dirname, './mock/user.json'), (err, data) => {
+      function rewriteJson(req, res, jsonUrl, objData, resMsg) {
+        fs.readFile(path.resolve(__dirname, jsonUrl), (err, data) => {
           let flag = false
 
           if (err) {
             throw err
           } else {
             let fileData = JSON.parse(data)
-            let id = parseInt(fileData[fileData.length - 1].id) + 1
-            let userNew = {
-              id: id,
+            let id = fileData.length ? (parseInt(fileData[fileData.length - 1].id) + 1) : 0
+            let userNew = objData
+            userNew.id = id;
+            fileData.push(userNew)
+            let userDataStr = JSON.stringify(fileData)
+    
+            fs.writeFile(path.resolve(__dirname, jsonUrl), userDataStr, err => {
+              if (err) console.error(err)
+              else {
+                flag = true
+                console.log('write success')
+              }
+
+              res.json({
+                code: flag == true ? 200 : 201,
+                result: flag == true ? 'success' : 'fail',
+                message: flag == true ? `${resMsg}成功` : `${resMsg}失败`
+              })
+            })
+            
+          }
+  
+        })
+      }
+
+      // 登录
+      app.post('/user/login', jsonParser, (req, res) => {
+        let val = false
+
+        userData.filter(userItem => {
+          if (userItem.email == req.body.email && userItem.pass == req.body.pass) {
+            val = true
+          }	
+        })
+
+        res.json({
+          code: val == true ? 200 : 201,
+          result: val == true ? 'success' : 'fail',
+          message: val == true ? '登录成功！' : '登录失败,用户名或密码错误！'
+        })
+      })
+
+      // 注册
+      app.post('/user/registered', jsonParser, (req, res) => {
+        let jsonUrl = './mock/user.json'
+        let objData = {
               name: req.body.name,
               email: req.body.email,
               pass: req.body.pass,
@@ -55,26 +78,9 @@ module.exports = {
               introduction: '',
               starArticleIds: []  
             }
-            fileData.push(userNew)
-            let userDataStr = JSON.stringify(fileData)
-    
-            fs.writeFile(path.resolve(__dirname, './mock/user.json'), userDataStr, err => {
-              if (err) console.error(err)
-              else {
-                flag = true
-                console.log('write success')
-              }
+        let resMsg = '注册'
 
-              res.json({
-                "code": flag == true ? 200 : 201,
-                "result": flag == true ? 'success' : 'fail',
-                "message": flag == true ? '注册成功！' : '注册失败！'
-              })
-            })
-            
-          }
-  
-        })
+        rewriteJson(req, res, jsonUrl, objData, resMsg)
       })
 
 
@@ -90,6 +96,22 @@ module.exports = {
           },
         }
         res.json(data)
+      })
+
+      // 发布文章
+      app.post('/publish', jsonParser, (req, res) => {
+        let jsonUrl = './mock/blog.json'
+        let objData = {
+            title: req.body.title,
+            content: req.body.content,
+            publishUser: req.body.publishUser,
+            publishTime: req.body.publishTime,
+            starIds: [],
+            collectIds: []
+          }
+        let resMsg = '博客发布'
+
+        rewriteJson(req, res, jsonUrl, objData, resMsg)
       })
     }
   },

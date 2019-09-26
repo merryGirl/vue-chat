@@ -75,7 +75,7 @@ mounted() {
 },
 methods: {
   getUser() {
-    this.axios({
+    this.$axios({
       url: '/user/login',
       method: 'get',
     }).then(res => {

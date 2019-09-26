@@ -1,25 +1,52 @@
 <!-- 组件描述 -->
 <template>
 <div class="blog">
-  博客博客内容
+  <template v-for="blogItem in blogs">
+    <blog-block :key="blogItem.id" :blogData='blogItem'></blog-block>
+  </template>
 </div>
 </template>
 
 <script>
+import blogBlock from '../../components/blog-block'
 
 export default {
 components: {
+  blogBlock
 },
 data() {
-return {
-
-};
+  return {
+    blogs: []
+  };
 },
 computed: {},
 watch: {},
-created() {},
+created() {
+  this.getBlogs()
+},
 mounted() {},
-methods: {}
+methods: {
+  getBlogs() {
+    this.$axios({
+      url: '/blogs',
+      method: 'get',
+    }).then(res => {
+      const data = res.data
+
+      if (data.passed) {
+        this.blogs = data.result
+      } else {
+        this.$message.error(data.message)
+      }
+    }).catch(err => {
+      console.log(err)
+    })
+  },
+
+  toDetail(e) {
+    console.log(e)
+  }
+}
 }
 </script>
 <style lang='less' scoped>

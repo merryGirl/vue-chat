@@ -7,7 +7,6 @@ const bodyParser = require('body-parser')
 const jsonParser = bodyParser.json()
 
 const userData = require('./mock/user.json')   // 用户信息
-const blogData = require('./mock/blog.json')
 
 module.exports = {
   publicPath: '/',
@@ -112,6 +111,23 @@ module.exports = {
         let resMsg = '博客发布'
 
         rewriteJson(req, res, jsonUrl, objData, resMsg)
+      })
+
+      // 返回所有博客信息
+      app.get('/blogs', jsonParser, (req, res) => {
+        let flag
+        fs.readFile(path.resolve(__dirname, './mock/blog.json'), (err, data) => {
+          if (err) flag = false
+          else {
+            flag = true
+          }
+
+          res.json({
+            code: flag == true ? 200 : 201,
+            result: flag == true ? JSON.parse(data) : 'fail',
+            message: flag == true ? '获取博客数据成功' : '获取博客数据失败'
+          })
+        })
       })
     }
   },

@@ -64,7 +64,7 @@ methods: {
       data: {
         title: this.article.title,
         content: this.article.content,
-        publishUser: this.userData.name,
+        publishUser: this.userData.name && this.userData.name.length ? this.userData.name : 'merryGirl',
         publishTime: time.toLocaleString()
       }
     }).then(res => {

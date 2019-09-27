@@ -6,6 +6,7 @@ const login = () => import('@/views/login')
 const userHomepage = () => import('@/views/user/index')
 const userInfo = () => import('@/views/user/info-card')
 const blog = () => import('@/views/blog/index')
+const blogDetail = () => import('@/views/blog/detail')
 const hotBlog = () => import('@/views/hotBlog/index')
 const community = () => import('@/views/chat/index')
 const notifications = () => import('@/views/notifications/index')
@@ -39,6 +40,11 @@ export default new Router({
       path: '/',
       name: 'blog',
       component: blog
+    },
+    {
+      path: '/blogDetail/:detailId',
+      name: 'blogDetail',
+      component: blogDetail
     },
     {
       path: '/hotBlog',

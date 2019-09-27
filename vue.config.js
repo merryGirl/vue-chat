@@ -116,16 +116,51 @@ module.exports = {
       // 返回所有博客信息
       app.get('/blogs', jsonParser, (req, res) => {
         let flag
+        let resData = []
         fs.readFile(path.resolve(__dirname, './mock/blog.json'), (err, data) => {
           if (err) flag = false
           else {
             flag = true
+            JSON.parse(data).forEach(item => {
+              let obj = {
+                collectIds: item.collectIds,
+                id: item.id,
+                publishTime: item.publishTime,
+                publishUser: item.publishUser,
+                starIds: item.starIds,
+                title: item.title
+              }
+              resData.push(obj)
+            })
           }
 
           res.json({
             code: flag == true ? 200 : 201,
-            result: flag == true ? JSON.parse(data) : 'fail',
+            result: flag == true ? resData : 'fail',
             message: flag == true ? '获取博客数据成功' : '获取博客数据失败'
+          })
+        })
+      })
+
+      // 返回对应博客信息
+      app.get('/blog/detail', jsonParser, (req, res) => {
+        let flag
+        let resData = {}
+        fs.readFile(path.resolve(__dirname, './mock/blog.json'), (err, data) => {
+          if (err) flag = false
+          else {
+            flag = true
+            JSON.parse(data).forEach(item => {
+              if (item.id == req.query.id) {
+                resData = item
+              }
+            })
+          }
+
+          res.json({
+            code: flag == true ? 200 : 201,
+            result: flag == true ? resData : 'fail',
+            message: flag == true ? '获取博客详情成功' : '获取博客详情失败'
           })
         })
       })

@@ -1,1 +1,73 @@
-[{"title":"撒打发","content":"<p>啊手动阀</p>\n","publishUser":"merryGirl","publishTime":"2019/9/26 下午2:21:35","starIds":[],"collectIds":[],"id":1},{"title":"1234","content":"<p>123412341234</p>\n","publishUser":"merryGirl","publishTime":"2019/9/26 下午2:30:47","starIds":[1,2,3],"collectIds":[],"id":2},{"title":"阿凡达","content":"<p>a撒旦发射点</p>\n","publishUser":"merryGirl","publishTime":"2019/9/26 下午2:32:28","starIds":[],"collectIds":[],"id":3},{"title":"33333333333333333","content":"<p>阿斯顿发射点</p>\n","publishUser":"merryGirl","publishTime":"2019/9/26 下午2:33:40","starIds":[],"collectIds":[1,2,3],"id":4},{"title":"4444444444","content":"<p>123123</p>\n","publishUser":"merryGirl","publishTime":"2019/9/26 下午2:49:39","starIds":[1,2,3],"collectIds":[],"id":5},{"title":"啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊","content":"<p>啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>\n","publishUser":"merryGirl","publishTime":"2019/9/26 下午2:49:58","starIds":[],"collectIds":[],"id":6},{"title":"","content":"","publishUser":"admin","publishTime":"2019/9/26 下午3:28:24","starIds":[],"collectIds":[],"id":7}]
+[{
+  "title": "撒打发",
+  "content": "<p>啊手动阀</p>\n",
+  "publishUser": "merryGirl",
+  "publishTime": "2019/9/26 下午2:21:35",
+  "starIds": [],
+  "collectIds": [],
+  "id": 1
+}, {
+  "title": "1234",
+  "content": "<p>123412341234</p>\n",
+  "publishUser": "merryGirl",
+  "publishTime": "2019/9/26 下午2:30:47",
+  "starIds": [1, 2, 3],
+  "collectIds": [],
+  "id": 2
+}, {
+  "title": "阿凡达",
+  "content": "<p>a撒旦发射点</p>\n",
+  "publishUser": "merryGirl",
+  "publishTime": "2019/9/26 下午2:32:28",
+  "starIds": [],
+  "collectIds": [],
+  "id": 3
+}, {
+  "title": "33333333333333333",
+  "content": "<p>阿斯顿发射点</p>\n",
+  "publishUser": "merryGirl",
+  "publishTime": "2019/9/26 下午2:33:40",
+  "starIds": [],
+  "collectIds": [1, 2, 3],
+  "id": 4
+}, {
+  "title": "4444444444",
+  "content": "<p>123123</p>\n",
+  "publishUser": "merryGirl",
+  "publishTime": "2019/9/26 下午2:49:39",
+  "starIds": [1, 2, 3],
+  "collectIds": [],
+  "id": 5
+}, {
+  "title": "啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊",
+  "content": "<p>啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>\n",
+  "publishUser": "merryGirl",
+  "publishTime": "2019/9/26 下午2:49:58",
+  "starIds": [],
+  "collectIds": [],
+  "id": 6
+}, {
+  "title": "",
+  "content": "<p>sdfasf</p>\n",
+  "publishUser": "merryGirl",
+  "publishTime": "2019/9/27 下午2:25:27",
+  "starIds": [],
+  "collectIds": [],
+  "id": 7
+}, {
+  "title": "qqqqqqqq",
+  "content": "<p>sdfasdf</p>\n",
+  "publishUser": "merryGirl",
+  "publishTime": "2019/9/27 下午2:26:00",
+  "starIds": [],
+  "collectIds": [],
+  "id": 8
+}, {
+  "title": "aaaaaaaaaaaa",
+  "content": "<pre><code>// 返回所有博客信息\n  app.get(&#39;/blogs&#39;, jsonParser, (req, res) =&gt; {\n    let flag\n    let resData = []\n    fs.readFile(path.resolve(__dirname, &#39;./mock/blog.json&#39;), (err, data) =&gt; {\n      if (err) flag = false\n      else {\n        flag = true\n        JSON.parse(data).forEach(item =&gt; {\n          let obj = {\n            collectIds: item.collectIds,\n            id: item.id,\n            publishTime: item.publishTime,\n            publishUser: item.publishUser,\n            starIds: item.starIds,\n            title: item.title\n          }\n          resData.push(obj)\n        })\n      }\n\n      res.json({\n        code: flag == true ? 200 : 201,\n        result: flag == true ? resData : &#39;fail&#39;,\n        message: flag == true ? &#39;获取博客数据成功&#39; : &#39;获取博客数据失败&#39;\n      })\n    })\n  })\n\n  // 返回对应博客信息\n  app.get(&#39;/blog/detail&#39;, jsonParser, (req, res) =&gt; {\n    let flag\n    let resData = {}\n    fs.readFile(path.resolve(__dirname, &#39;./mock/blog.json&#39;), (err, data) =&gt; {\n      if (err) flag = false\n      else {\n        flag = true\n        console.log(&#39;哈哈&#39;, req.query.id)\n        JSON.parse(data).forEach(item =&gt; {\n          if (item.id == req.query.id) {\n            resData = item\n          }</code></pre>",
+  "publishUser": "merryGirl",
+  "publishTime": "2019/9/27 下午2:59:49",
+  "starIds": [],
+  "collectIds": [],
+  "id": 9
+}]

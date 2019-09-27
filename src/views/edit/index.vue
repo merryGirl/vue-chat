@@ -1,11 +1,11 @@
 <template>
 <div class="edit-wrapper">
-  <div class="article-title">
-   <el-input v-model="article.title" placeholder="请输入文章标题"></el-input>
+  <div class="blog-title">
+   <el-input v-model="blog.title" placeholder="请输入文章标题"></el-input>
    <el-button @click="toggleType">{{editText}}</el-button>
    <el-button @click="publish">发布</el-button>
   </div>
-  <div class="article-content">
+  <div class="blog-content">
     <mavon-editor v-if="editType == 1" @contentChange="contentChange"></mavon-editor>
     <quill-editor v-else></quill-editor>
   </div>
@@ -25,7 +25,7 @@ components: {
 },
 data() {
   return {
-    article: {
+    blog: {
       title: '',
       content: ''
     },
@@ -51,19 +51,23 @@ methods: {
 
   contentChange(val) {
     if (this.editType == 1) {
-      this.article.content = marked(val)
+      this.blog.content = marked(val)
     }
   },
 
   publish() {
-    let time = new Date()
+    if (!this.blog.title ||  !this.blog.content) {
+      this.$message.error('需将内容填写完整后才可发布文章')
+      return
+    }
 
+    let time = new Date()
     this.$axios({
       url: '/publish',
       method: 'post',
       data: {
-        title: this.article.title,
-        content: this.article.content,
+        title: this.blog.title,
+        content: this.blog.content,
         publishUser: this.userData.name && this.userData.name.length ? this.userData.name : 'merryGirl',
         publishTime: time.toLocaleString()
       }
@@ -78,13 +82,14 @@ methods: {
     }).catch(err => {
       console.log(err)
     })
-  }
+  },
+
 }
 }
 </script>
 <style lang='less' scoped>
 .edit-wrapper {
-  .article-title {
+  .blog-title {
     display: flex;
   }
 }

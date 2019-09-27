@@ -1,9 +1,11 @@
 <!-- 组件描述 -->
 <template>
 <div class="blog">
-  <template v-for="blogItem in blogs">
-    <blog-block :key="blogItem.id" :blogData='blogItem'></blog-block>
-  </template>
+  <div class="main-area">
+    <template v-for="blogItem in blogs">
+      <blog-block :key="blogItem.id" :blogData="blogItem"></blog-block>
+    </template>
+  </div>
 </div>
 </template>
 
@@ -50,4 +52,8 @@ methods: {
 }
 </script>
 <style lang='less' scoped>
+.blog {
+  display: flex;
+  justify-content: center;
+}
 </style>

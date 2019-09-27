@@ -1,6 +1,6 @@
 <!-- blog block -->
 <template>
-<div class="blog-block">
+<div class="blog-block" @click="skipDetail">
   <div class="blog-info">
     <div class="sub-title">{{ blogData.publishUser }}{{ blogData.publishTime }}</div>
     <div class="main-title">{{ blogData.title }}</div>
@@ -31,7 +31,13 @@ computed: {},
 watch: {},
 created() {},
 mounted() {},
-methods: {}
+methods: {
+  skipDetail() {
+    this.$router.push({
+      path: `/blogDetail/${this.blogData.id}`
+    })
+  }
+}
 }
 </script>
 <style lang='less' scoped>
